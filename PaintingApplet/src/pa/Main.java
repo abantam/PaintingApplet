@@ -8,6 +8,8 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import javax.swing.JApplet;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class Main extends JApplet implements MouseListener, MouseMotionListener {
 	
@@ -25,6 +27,17 @@ public class Main extends JApplet implements MouseListener, MouseMotionListener 
 		setSize(scrSize, scrSize);
 		addMouseListener(this);
 		addMouseMotionListener(this);
+		
+		JPanel p = new JPanel();
+		add(p);
+		
+		JButton pen = new JButton("Pen");
+		JButton eraser = new JButton("Eraser");
+//		pen.setSize(50, 100);
+//		eraser.setSize(50, 100);
+		
+		add(pen);
+		add(eraser);
 		
 		status = 0;
 	}
